@@ -1,5 +1,5 @@
 import React from "react";
-import InputField from "../../../components/inputField/InputField";
+import InputField from "./inputField/InputField";
 
 const CustomForm = ({ button }) => {
   return (

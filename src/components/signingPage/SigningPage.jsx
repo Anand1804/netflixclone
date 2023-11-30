@@ -1,4 +1,4 @@
-import InputField from "../../../../components/inputField/InputField";
+import InputField from "../inputField/InputField";
 import CustomForm from "../CustomForm";
 import "./signingPageCss.css";
 
