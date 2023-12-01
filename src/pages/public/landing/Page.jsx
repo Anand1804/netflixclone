@@ -1,19 +1,20 @@
 import CustomButton from "../../../components/button/CustomButton";
+import TextField from "../../../components/heading/TextField";
+import NavBar from "../../../components/navbar/NavBar";
 import "../landing/page.css";
 import Select from "@mui/material/Select";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const LandingPage = () => {
   const navigator = useNavigate();
   const handleClick = () => {
-    // alert("hi btn clicked");
-    navigator("/signInPage");
+    navigator("/signIn");
   };
   return (
     <>
       <div className="containerStyle">
         <div className="shadowForBg">
-          <div className="">
+          {/* <div className="">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="180"
@@ -35,7 +36,10 @@ const LandingPage = () => {
             </div>
 
             <CustomButton btnText="Sign In" handleClick={handleClick} />
-          </div>
+
+            <TextField className="small" text="Welcome" />
+          </div> */}
+          <NavBar isLanding handleLogin={handleClick} />
         </div>
       </div>
     </>

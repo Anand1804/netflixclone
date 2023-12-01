@@ -1,6 +1,8 @@
 import InputField from "../inputField/InputField";
 import CustomForm from "../CustomForm";
 import "./signingPageCss.css";
+import { Link } from "react-router-dom";
+import nflogo from "../../source/Netflix_Logo.png";
 
 const SigningPage = ({
   reCAPTCHA,
@@ -9,10 +11,12 @@ const SigningPage = ({
   page,
   navText,
   navLink,
+  navLinkName,
 }) => {
   return (
     <div className="signin_page">
       <div className="shadow">
+        <img className="nflogo" src={nflogo} alt="" width={152} height={64} />
         <div className="signin">
           <h1 className="head">{pageTitle}</h1>
           <CustomForm button={button} />
@@ -27,7 +31,7 @@ const SigningPage = ({
           )}
           <div className="new">
             {navText && <p>{navText}</p>}
-            {navLink && <a href="/">{navLink}</a>}
+            {navLink && <Link to={navLinkName}>{navLink}</Link>}
           </div>
           {reCAPTCHA && <p className="capt">{reCAPTCHA}</p>}
         </div>

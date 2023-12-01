@@ -1,6 +1,6 @@
 import SigningPage from "../../../components/signingPage/SigningPage";
 
-const SignUpPage = () => {
+const SignUp = () => {
   return (
     <>
       <SigningPage
@@ -9,9 +9,10 @@ const SignUpPage = () => {
         button={"Sign Up"}
         navText={"Already subscribed to NetFlix?"}
         navLink={"Sign in"}
+        navLinkName={"/signIn"}
       />
     </>
   );
 };
 
-export default SignUpPage;
+export default SignUp;

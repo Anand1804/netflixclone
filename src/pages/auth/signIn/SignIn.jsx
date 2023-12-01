@@ -1,6 +1,8 @@
+import NavBar from "../../../components/navbar/NavBar";
 import SigningPage from "../../../components/signingPage/SigningPage";
+import { useNavigate } from "react-router-dom";
 
-const SignInPage = () => {
+const SignIn = () => {
   return (
     <>
       <SigningPage
@@ -12,10 +14,11 @@ const SignInPage = () => {
         }
         navText={"New to NetFlix?"}
         navLink={"Sign up now"}
+        navLinkName={"/signUp"}
       />
       ;
     </>
   );
 };
 
-export default SignInPage;
+export default SignIn;
