@@ -84,7 +84,38 @@ const LandingPage = () => {
             contentText="Send children on adventures with their favorite characters in a space made just for them—free with your membership."
           />
           <div className="accordian-section">
+            <Heading
+              color="white"
+              align="center"
+              size="bold"
+              title="Frequently Asked Questions"
+            />
             <Accordion />
+
+            <Content
+              color="white"
+              align="center"
+              content="Ready to watch? Enter your email to create or restart your membership."
+            />
+
+            <div className="getStarted_col">
+              <div className="landing-input">
+                <InputField
+                  type="email"
+                  className="width-full inputBg"
+                  label="Email Address"
+                  getStarted
+                />
+                <CustomButton
+                  value="Get started"
+                  bg="bg-1"
+                  color="white"
+                  size="large"
+                  rounded="rounded"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
           </div>
           <Footer />
         </div>

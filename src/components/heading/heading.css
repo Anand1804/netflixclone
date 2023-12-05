@@ -36,6 +36,11 @@
     padding-top: 20px;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 767px) {
     .bold {
         padding: 0px 40px;

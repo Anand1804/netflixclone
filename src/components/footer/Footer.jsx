@@ -23,7 +23,9 @@ const Footer = () => {
       <div className="footer">
         <p className="para">
           Questions? Call
-          <a href="hv">000-800-919-1694</a>
+          <a href="hv" className="footer-contact">
+            000-800-919-1694
+          </a>
         </p>
         <div className="footer-content">
           {content.map((item) => (

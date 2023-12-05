@@ -40,4 +40,16 @@ select {
     line-height: 14px;
     font-size: 16px;
     font-weight: 300;
+    text-decoration: none;
+}
+.footer-link:hover{
+    text-decoration: underline;
+}
+.footer-contact{
+    color: #918f8f;
+    line-height: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 6px;
 }

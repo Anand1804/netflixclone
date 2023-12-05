@@ -1,8 +1,14 @@
 import "./heading.css";
 
-const Content = ({ content, color = " ", className = " ", line }) => {
+const Content = ({
+  content,
+  align = "",
+  color = " ",
+  className = " ",
+  line,
+}) => {
   return (
-    <p className={`medium-with-bold ${className} ${line} ${color}`}>
+    <p className={`medium-with-bold ${className} ${align} ${line} ${color}`}>
       {content}
     </p>
   );
