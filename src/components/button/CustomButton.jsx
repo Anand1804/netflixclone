@@ -1,13 +1,26 @@
-import "../button/customButton.css";
-const CustomButton = ({ btnText = "submit", handleClick, className }) => {
+import "./customButton.css";
+
+const CustomButton = ({
+  bg = " ",
+  size = " ",
+  color = " ",
+  value,
+  rounded = " ",
+  icon,
+  iconProp = " ",
+  type,
+  onClick,
+}) => {
   return (
-    <>
-      <div sx={{ width: "500px", height: "300px", padding: "30px" }}>
-        <button className={className} onClick={handleClick}>
-          {btnText}
-        </button>
-      </div>
-    </>
+    <button
+      className={`${bg} ${color} ${rounded} ${size} `}
+      type={type}
+      onClick={onClick}
+    >
+      {value}
+      {icon && <div className={`${iconProp}`}>{icon}</div>}
+    </button>
   );
 };
+
 export default CustomButton;

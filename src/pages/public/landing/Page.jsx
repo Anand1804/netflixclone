@@ -1,10 +1,19 @@
-import CustomButton from "../../../components/button/CustomButton";
-import TextField from "../../../components/heading/TextField";
-import NavBar from "../../../components/navbar/NavBar";
-import "../landing/page.css";
-import Select from "@mui/material/Select";
-
 import { useNavigate } from "react-router-dom";
+import NavBar from "../../../components/navbar/NavBar";
+import Heading from "../../../components/heading/Heading";
+import Content from "../../../components/heading/Content";
+import CustomButton from "../../../components/button/CustomButton";
+import InputField from "../../../components/inputField/InputField";
+
+import ImgOne from "../../../source/tv.png";
+import ImgTwo from "../../../source/strangeThings.jpg";
+import ImgThree from "../../../source/tvImg2.png";
+import ImgFour from "../../../source/children.png";
+
+import "./page.css";
+import Banner from "../../../components/banner/Banner";
+import Footer from "../../../components/footer/Footer";
+import Accordion from "../../../components/accordion/Accordion";
 const LandingPage = () => {
   const navigator = useNavigate();
   const handleClick = () => {
@@ -12,34 +21,72 @@ const LandingPage = () => {
   };
   return (
     <>
-      <div className="containerStyle">
-        <div className="shadowForBg">
-          {/* <div className="">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="180"
-              height="50"
-              viewBox="0 0 300 81.387"
-              id="netflix"
-              className="topNav"
-            >
-              <g fill="#b81d24">
-                <path d="M256.09 76.212c4.178.405 8.354.84 12.52 1.29l9.198-22.712 8.743 24.807c4.486.562 8.97 1.152 13.44 1.768l-15.328-43.501L299.996 0H287.01l-.135.186-8.283 20.455L271.32.003h-12.822l13.237 37.565-15.644 38.644zM246.393 75.322V0h-12.817v74.265c4.275.33 8.552.684 12.817 1.056M150.113 71.11c3.46 0 6.916.026 10.366.054V43.492h15.397V31.708H160.48v-19.91h17.733V0h-30.6v71.12c.831 0 1.666-.013 2.5-.01M110.319 71.83c4.27-.152 8.544-.28 12.824-.384V11.8h11.98V.003H98.339V11.8h11.982v60.03h-.002zM12.295 79.772V34.897L27.471 77.96c4.667-.524 9.341-1.017 14.028-1.483V.001H29.201v46.483L12.825.001H0v81.384h.077c4.063-.562 8.14-1.096 12.218-1.613M85.98 11.797V.001H55.377V75.202a1100.584 1100.584 0 0 1 30.578-2.211V61.184c-5.916.344-11.82.74-17.71 1.181V43.497h15.397V31.706H68.245V11.797H85.98zM203.614 60.62V-.003h-12.873v71.876c10.24.376 20.44.9 30.606 1.56V61.619c-5.9-.381-11.81-.712-17.733-1"></path>
-              </g>
-            </svg>
-            <div>
-              <Select className="selectUi">
-                <option value={"english"}>English</option>
-                <option value={"tamil"}>Tamil</option>
-                <option value={"hindi"}>Hindi</option>
-              </Select>
-            </div>
-
-            <CustomButton btnText="Sign In" handleClick={handleClick} />
-
-            <TextField className="small" text="Welcome" />
-          </div> */}
-          <NavBar isLanding handleLogin={handleClick} />
+      <div className="landing_container">
+        <div className="landing_page">
+          <div className="shadow_wrapper">
+            <NavBar />
+            <section className="landing-content-wrapper">
+              <div className="landing-content ">
+                <Heading
+                  size="bold"
+                  color="white"
+                  title="Unlimited movies, TV shows, and more"
+                />
+                <Content
+                  className="medium-with-bold"
+                  content="Watch anywhere, Cancel anywhere."
+                  color="white"
+                />
+              </div>
+              <div className="getStarted_col">
+                <Content
+                  content="Ready to watch? Enter your email to create or restart your membership."
+                  color="white"
+                  className="line"
+                />
+                <div className="landing-input">
+                  <InputField
+                    type="email"
+                    className="width-full inputBg"
+                    label="Email Address"
+                    getStarted
+                  />
+                  <CustomButton
+                    value="Get started"
+                    bg="bg-1"
+                    color="white"
+                    size="large"
+                    rounded="rounded"
+                    onClick={handleClick}
+                  />
+                </div>
+              </div>
+            </section>
+          </div>
+          <Banner
+            titleText="Enjoy on your TV"
+            contentText="Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more."
+            imgs={ImgOne}
+          />
+          <Banner
+            imgs={ImgTwo}
+            titleText="Download your shows to watch offline"
+            contentText="Save your favorites easily and always have something to watch."
+          />
+          <Banner
+            imgs={ImgThree}
+            titleText="Watch everywhere"
+            contentText="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV."
+          />
+          <Banner
+            imgs={ImgFour}
+            titleText="Create profiles for kids"
+            contentText="Send children on adventures with their favorite characters in a space made just for them—free with your membership."
+          />
+          <div className="accordian-section">
+            <Accordion />
+          </div>
+          <Footer />
         </div>
       </div>
     </>

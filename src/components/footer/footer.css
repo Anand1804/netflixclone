@@ -1,0 +1,43 @@
+.footer {
+    height: 50vh;
+    padding: 50px 160px;
+    background-color: #000;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #fff;
+}
+
+.para {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.selection {
+    padding: 10px;
+}
+
+select {
+    padding: 8px;
+    background-color: rgb(36, 35, 35);
+    color: white;
+    border-radius: 5px;
+}
+
+.py {
+    margin-top: 30px;
+    color: #918f8f;
+}
+
+.footer-link{
+    color: #918f8f;
+    line-height: 14px;
+    font-size: 16px;
+    font-weight: 300;
+}

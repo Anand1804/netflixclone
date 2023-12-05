@@ -1,0 +1,30 @@
+.banner_container{
+    height: 60vh;
+    /* width: 70%; */
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 8px solid rgba(255, 255, 255, 0.2);
+    padding: 50px 100px;
+}
+.banner_wrapper{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+
+}
+.tv-image{
+    width: 50%;
+}
+.tv-image>img{
+    height: 100%;
+    width: 100%;
+}

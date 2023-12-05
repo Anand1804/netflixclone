@@ -1,7 +1,7 @@
-import React from "react";
+import CustomButton from "./button/CustomButton";
 import InputField from "./inputField/InputField";
 
-const CustomForm = ({ button }) => {
+const CustomForm = ({ button, isSignUp }) => {
   return (
     <form action="" className="form_btn">
       <InputField
@@ -18,7 +18,14 @@ const CustomForm = ({ button }) => {
         error={true}
         label={"PASSWORD"}
       />
-      <button className="btn">{button}</button>
+      <CustomButton
+        value={button}
+        bg="bg-2"
+        size="x-large"
+        rounded="rounded"
+        color="white"
+        type="submit"
+      />
     </form>
   );
 };

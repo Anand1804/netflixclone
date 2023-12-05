@@ -1,11 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import CustomButton from "../button/CustomButton";
 import netflix from "../../source/Netflix_Logo.png";
 import profile from "../../source/profile_btn.png";
 import "./navBarCss.css";
 
-const NavBar = ({ isUser, handleLogin, handleLogout }) => {
+const NavBar = ({ isUser }) => {
+  const navigator = useNavigate();
+  const handleLogin = () => {
+    navigator("/signIn");
+  };
+
+  const handleLogout = () => {
+    navigator("/home");
+  };
   return (
-    <div className="navbar">
+    <div className="navbar-container">
       <div className="logo_sec">
         <img src={netflix} alt="Netflix" width={152} height={64} />
         {isUser && (
@@ -22,19 +31,23 @@ const NavBar = ({ isUser, handleLogin, handleLogout }) => {
           <CustomButton
             btnText="Log Out"
             className="large"
-            handleClick={handleLogout}
+            onClick={handleLogout}
           />
         </div>
       ) : (
         <div className="menu">
-          <select className="lang">
-            <option value="">English</option>
-            <option value="">Hindi</option>
+          <select className="language">
+            <option value="english">English</option>
+            <option value="tamil">தமிழ்</option>
+            <option value="hindi">हिंदी</option>
           </select>
           <CustomButton
-            className="medium"
-            btnText="Sign In"
-            handleClick={handleLogin}
+            bg="bg-2"
+            size="medium"
+            value="Sign In"
+            rounded="rounded"
+            color="white"
+            onClick={handleLogin}
           />
         </div>
       )}

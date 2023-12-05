@@ -8,7 +8,7 @@ const SignIn = () => {
       <SigningPage
         page={"signIn"}
         pageTitle={"Sign In"}
-        button={"Sign In"}
+        button="Sign In"
         reCAPTCHA={
           "This page is protected by Google reCAPTCHA to ensure you're not abot."
         }
